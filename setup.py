@@ -23,8 +23,9 @@ __version__ = '0.11.0'
 def _make_required_install_packages():
   return [
       'absl-py>=0.1.6',
-      'apache-beam[gcp]>=2.8,<3',
-      'numpy>=1.13.3,<2',
+    #   'apache-beam[gcp]>=2.8,<3',
+    #   'numpy>=1.13.3,<2',
+      'numpy==1.15',
 
       # TF now requires protobuf>=3.6.0.
       'protobuf>=3.6.0,<4',
@@ -78,7 +79,7 @@ setup(
         ],
     namespace_packages=[],
     install_requires=_make_required_install_packages(),
-    python_requires='>=2.7,<3',
+    python_requires='>=2.7',
     packages=find_packages(),
     include_package_data=True,
     description='A library for data preprocessing with TensorFlow',
